@@ -9,16 +9,17 @@ All inputs, models, reports, poses, and figures live in **Google My Drive**:
 ## Run in Colab CPU or VS Code
 
 **Colab CPU:** upload the complete `ACE_Workflow` directory to the top of My
-Drive, open its notebooks there, and run notebook 0. Its optional setup cell
-installs dependencies and AutoDock Vina in the temporary CPU runtime; all
+Drive, open its notebooks there, and run notebook 0. Set
+`INSTALL_COLAB_CPU_DEPENDENCIES = True` once per fresh runtime: it installs
+`requirements.txt` and downloads the official AutoDock Vina 1.2.5 binary. All
 artifacts are written back to My Drive. No GPU is requested anywhere.
 
 **VS Code:** use Google Drive for desktop to sync `My Drive/ACE_Workflow`, then
 open that synced folder in VS Code and select its Python/Jupyter interpreter.
-Install `requirements.txt`; install AutoDock Vina separately and expose it as
-`vina` (or `vina.exe`) on the system path. If VS Code starts the notebook from
-another folder, set `ACE_WORKFLOW_ROOT` to the synced `ACE_Workflow` directory.
-This gives both environments the exact same files and paths.
+Install `requirements.txt`; install AutoDock Vina **>= 1.2** separately and expose
+it as `vina` (or `vina.exe`) on the system path (Vina 1.1.x lacks options used here).
+If VS Code starts the notebook from another folder, set `ACE_WORKFLOW_ROOT` to
+the synced `ACE_Workflow` directory.
 
 ## Inputs
 
@@ -31,25 +32,50 @@ Place every input below in `My Drive/ACE_Workflow/data/raw/` before running:
   `glaxo_structural_alerts.csv`.
 - `1o86.pdb` — ACE receptor for redocking and docking.
 
-ChEMBL inputs need a SMILES column plus either pChEMBL values or IC50 / standard
-values. If standard type and relation columns are present, only equality IC50
-measurements are retained.
+ChEMBL exports need a SMILES column and either pChEMBL or IC50 standard values.
+For the biochemical-assay filter they should also include `assay_type`
+(otherwise the code falls back to BAO format, then to description keywords, and
+prints a warning). Comma-/semicolon-delimited CSV, TSV and Excel are supported;
+wrapping quotes around values (`'IC50'`, `'='`) are removed.
+
+## Data-selection rules (defined once in `ace_config.py`)
+
+- **Activity:** active if IC50 <= **25 nM** (`IC50_CUTOFF_NM`); the regressor/drugability
+  cutoff is the same value expressed as pChEMBL (9 - log10(25) = 7.60).
+- **Assays:** biochemical / binding only (`BIOCHEMICAL_ONLY`, ChEMBL `assay_type == "B"`).
+- **Censored data:** `>` / `>=` IC50 records >= 10,000 nM are kept as *inactive*
+  (`CENSORED_INACTIVE_MIN_NM`); `<` records and smaller `>` bounds are dropped.
+  Censored compounds have no pChEMBL and are not used by the regressor.
+- **Prodrugs:** ester / thioester / phosphinate-ester ACE-inhibitor prodrugs
+  (e.g. enalapril, ramipril, fosinopril, zofenopril) are removed from training,
+  external and screening sets (`EXCLUDE_PRODRUGS`); removed rows are saved as CSV.
+- Model selection uses scaffold-grouped cross-validation within CHEMBL1808 only;
+  CHEMBL2096989 is never used for tuning.
 
 ## Notebook order
 
 1. `notebooks/0-ACE-CONFIG.ipynb`
 2. `notebooks/1-ACE-MODEL-IC50-CUTOFF.ipynb`
-3. `notebooks/2-ACE-MODEL-REGRESSOR.ipynb`
+3. `notebooks/2-ACE-MODEL-REGRESSOR.ipynb` (writes `ace_tanimoto.py` to the project root)
 4. `notebooks/3-ACE-DRUGABILITY.ipynb`
 5. `notebooks/4-ACE-REDOCK-1O86.ipynb`
 6. `notebooks/5-ACE-DOCK-1O86.ipynb`
 7. `notebooks/6-ACE-VIZ.ipynb`
 
-The default binary activity definition is IC50 <= 1,000 nM. Change it only
-before fitting and record the rationale. Model selection uses scaffold-grouped
-cross-validation within CHEMBL1808; CHEMBL2096989 is never used for tuning.
+`3-ACE-DRUGABILITY` calculates Lipinski/Veber descriptors and Glaxo SMARTS
+alerts. They are transparent prioritization rules, not clinical ADMET or toxicity
+claims; check its positive-control table (known ACE drugs) before interpreting
+the pass list. `4-ACE-REDOCK-1O86` must reproduce the lisinopril pose within 2 A
+for at least 2 of 3 seeds before candidate docking is allowed to run.
 
-`3-ACE-DRUGABILITY` calculates Lipinski/Veber ADME-relevant descriptors and
-Glaxo SMARTS alerts. They are transparent prioritization rules, not clinical
-ADMET or toxicity claims. `4-ACE-REDOCK-1O86` must pass an RMSD review before
-candidate docking results are interpreted.
+## Docking limitations
+
+Vina scores are not binding affinities. Vina has no explicit zinc-coordination
+term, ligands are docked in their neutral SMILES form with undefined stereocentres
+embedded arbitrarily, and the receptor is rigid. Treat docking and PLIP contacts
+as prioritisation evidence only; experimental ACE inhibition and ADMET testing are required.
+
+## Repository hygiene
+
+Do not commit `__pycache__/`. Check licences before publishing third-party raw data
+(ChEMBL, DrugBank, NPASS, CMAUP). A suitable `.gitignore` is included.
