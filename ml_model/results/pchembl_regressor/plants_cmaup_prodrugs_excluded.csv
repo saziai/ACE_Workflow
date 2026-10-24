@@ -1,0 +1,2 @@
+source,source_id,input_smiles,canonical_smiles,ace_prodrug_reason
+PLANTS_CMAUP,GBXSMTUPTTWBMN-XIRDDKMYSA-N,CCOC(=O)C(CCc1ccccc1)NC(C)C(=O)N1CCCC1C(=O)O,CCOC(=O)C(CCc1ccccc1)NC(C)C(=O)N1CCCC1C(=O)O,carboxylate_ester_prodrug

@@ -1,0 +1,24 @@
+{
+  "training_database": "CHEMBL1808",
+  "external_database": "CHEMBL2096989",
+  "activity_definition": "active if IC50 <= 25.0 nM; IC50 > / >= 10000 nM kept as inactive",
+  "assay_filter": "assay_type == B (Binding) [column 'Assay Type']",
+  "prodrugs_excluded": true,
+  "training_censored_inactive_compounds": 44,
+  "ic50_cutoff_nM": 25.0,
+  "selected_model": "Random Forest",
+  "selection_method": "training-only scaffold-grouped CV; pooled OOF AP, ROC-AUC tie-breaker",
+  "cv_splitter": "StratifiedGroupKFold",
+  "n_splits": 5,
+  "random_state": 42,
+  "fingerprint": {
+    "type": "Morgan",
+    "radius": 2,
+    "n_bits": 2048
+  },
+  "probability_threshold": 0.5,
+  "training_compounds": 590,
+  "external_compounds_after_exact_overlap_removal": 36,
+  "external_active_count": 5,
+  "external_shared_scaffold_count": 5
+}

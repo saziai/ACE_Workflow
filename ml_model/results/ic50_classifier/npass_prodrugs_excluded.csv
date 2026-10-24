@@ -1,0 +1,7 @@
+source,source_id,input_smiles,canonical_smiles,ace_prodrug_reason
+NPASS,NPC325745,NC(CCC(=O)NC(CSC(=O)CCl)C(=O)NCC(=O)O)C(=O)O,NC(CCC(=O)NC(CSC(=O)CCl)C(=O)NCC(=O)O)C(=O)O,thioester_prodrug
+NPASS,NPC478921,CCOC(=O)C(CCc1ccccc1)NC(C)C(=O)N1CCCC1C(=O)O,CCOC(=O)C(CCc1ccccc1)NC(C)C(=O)N1CCCC1C(=O)O,carboxylate_ester_prodrug
+NPASS,NPC321442,NC(CCC(=O)NC(CSCC(=O)SCC(NC(=O)CCC(N)C(=O)O)C(=O)NCC(=O)O)C(=O)NCC(=O)O)C(=O)O,NC(CCC(=O)NC(CSCC(=O)SCC(NC(=O)CCC(N)C(=O)O)C(=O)NCC(=O)O)C(=O)NCC(=O)O)C(=O)O,thioester_prodrug
+NPASS,NPC320021,CC(O)C(=O)SCC(NC(=O)CCC(N)C(=O)O)C(=O)NCC(=O)O,CC(O)C(=O)SCC(NC(=O)CCC(N)C(=O)O)C(=O)NCC(=O)O,thioester_prodrug
+NPASS,NPC487151,CC(C)(C)C(=O)OCOP(=O)(COCCn1cnc2c(N)ncnc21)OCOC(=O)C(C)(C)C,CC(C)(C)C(=O)OCOP(=O)(COCCn1cnc2c(N)ncnc21)OCOC(=O)C(C)(C)C,acyloxyalkyl_phosphinate_prodrug
+NPASS,NPC477516,CSCC1C(=O)SCC(NC(=O)c2nc3ccccc3cc2O)C(=O)NCC(=O)N(C)C2CSSCC(C(=O)N1C)N(C)C(=O)CNC(=O)C(NC(=O)c1nc3ccccc3cc1O)CSC(=O)C(CSC)N(C)C2=O,CSCC1C(=O)SCC(NC(=O)c2nc3ccccc3cc2O)C(=O)NCC(=O)N(C)C2CSSCC(C(=O)N1C)N(C)C(=O)CNC(=O)C(NC(=O)c1nc3ccccc3cc1O)CSC(=O)C(CSC)N(C)C2=O,thioester_prodrug

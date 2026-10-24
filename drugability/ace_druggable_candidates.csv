@@ -1,0 +1,2 @@
+source,canonical_smiles,ace_active_probability,max_train_tanimoto_cls,source_id,n_records,predicted_pchembl,predicted_ic50_nM,max_train_tanimoto_reg,model_pass,mw,logp,hbd,hba,tpsa,rotatable_bonds,lipinski_pass,veber_pass,glaxo_alert_count,glaxo_alerts,admet_descriptor_pass,glaxo_alert_pass,drugability_pass,priority_score
+FDA_DRUGBANK,CC(NC(CCc1ccccc1)C(=O)O)C(=O)N1CCCC1C(=O)O,0.9430562506676348,1.0,Enalaprilat,1,8.420109577909674,3.8009348189891217,1.0,True,348.39900000000017,1.1261000000000003,3.0,4.0,106.94000000000001,8.0,True,True,0.0,,True,True,True,7.940636968754138

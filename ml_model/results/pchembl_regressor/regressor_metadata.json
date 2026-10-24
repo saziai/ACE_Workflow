@@ -1,0 +1,18 @@
+{
+  "training_database": "CHEMBL1808",
+  "external_validation_database": "CHEMBL2096989",
+  "selected_model": "tanimoto_svr",
+  "selection_metric": "pooled out-of-fold RMSE, StratifiedGroupKFold on Murcko scaffolds (folds shared with the classifier)",
+  "assay_filter": "biochemical/binding only",
+  "prodrugs_excluded": true,
+  "training_data": "exact (=) IC50 values only",
+  "n_splits": 5,
+  "random_state": 42,
+  "fingerprint": {
+    "type": "Morgan",
+    "radius": 2,
+    "n_bits": 2048
+  },
+  "training_compounds": 546,
+  "external_compounds": 36
+}

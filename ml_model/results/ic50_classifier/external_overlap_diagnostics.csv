@@ -1,0 +1,6 @@
+canonical_smiles,train_ic50_nM,train_active,external_ic50_nM,external_active,label_conflict
+C[C@@H](CC(=O)[C@@H](Cc1ccccc1)NC(=O)c1ccccc1)C(=O)N1CCC[C@H]1C(=O)O,3162.2776601683795,0,3162.2776601683795,0,False
+C[C@H](CC(=O)[C@H](Cc1ccccc1)NC(=O)c1ccccc1)C(=O)N1CCC[C@H]1C(=O)O,1.0,1,1.0,1,False
+C[C@H](CS)C(=O)N1CCC[C@H]1C(=O)O,20.4227922291146,1,8.91250938133744,1,False
+O=C(N[C@@H](Cc1ccccc1)C(=O)CCC(=O)N1CCC[C@H]1C(=O)O)c1ccccc1,40.60287071903388,0,3.235936569296281,1,True
+O=C(N[C@@H](Cc1ccccc1)C(=O)NCC(=O)N1CCC[C@H]1C(=O)O)c1ccccc1,9332.543007969905,0,9332.543007969905,0,False

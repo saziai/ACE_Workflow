@@ -1,0 +1,14 @@
+source,source_id,input_smiles,canonical_smiles,ace_prodrug_reason
+FDA_DRUGBANK,Ramipril,CCOC(=O)C(CCc1ccccc1)NC(C)C(=O)N1C(C(=O)O)C[C@@H]2CCC[C@@H]21,CCOC(=O)C(CCc1ccccc1)NC(C)C(=O)N1C(C(=O)O)C[C@@H]2CCC[C@@H]21,carboxylate_ester_prodrug
+FDA_DRUGBANK,Tenofovir disoproxil,CC(C)OC(=O)OCOP(=O)(CO[C@H](C)Cn1cnc2c(N)ncnc21)OCOC(=O)OC(C)C,CC(C)OC(=O)OCOP(=O)(CO[C@H](C)Cn1cnc2c(N)ncnc21)OCOC(=O)OC(C)C,acyloxyalkyl_phosphinate_prodrug
+FDA_DRUGBANK,Fosinopril,CCC(=O)O[C@@H](OP(=O)(CCCCc1ccccc1)CC(=O)N1C[C@H](C2CCCCC2)CC1C(=O)O)C(C)C,CCC(=O)O[C@@H](OP(=O)(CCCCc1ccccc1)CC(=O)N1C[C@H](C2CCCCC2)CC1C(=O)O)C(C)C,acyloxyalkyl_phosphinate_prodrug
+FDA_DRUGBANK,Trandolapril,CCOC(=O)C(CCc1ccccc1)NC(C)C(=O)N1C(C(=O)O)C[C@H]2CCCC[C@@H]21,CCOC(=O)C(CCc1ccccc1)NC(C)C(=O)N1C(C(=O)O)C[C@H]2CCCC[C@@H]21,carboxylate_ester_prodrug
+FDA_DRUGBANK,Benazepril,CCOC(=O)C(CCc1ccccc1)NC1CCc2ccccc2N(CC(=O)O)C1=O,CCOC(=O)C(CCc1ccccc1)NC1CCc2ccccc2N(CC(=O)O)C1=O,carboxylate_ester_prodrug
+FDA_DRUGBANK,Enalapril,CCOC(=O)C(CCc1ccccc1)NC(C)C(=O)N1CCCC1C(=O)O,CCOC(=O)C(CCc1ccccc1)NC(C)C(=O)N1CCCC1C(=O)O,carboxylate_ester_prodrug
+FDA_DRUGBANK,Moexipril,CCOC(=O)C(CCc1ccccc1)NC(C)C(=O)N1Cc2cc(OC)c(OC)cc2CC1C(=O)O,CCOC(=O)C(CCc1ccccc1)NC(C)C(=O)N1Cc2cc(OC)c(OC)cc2CC1C(=O)O,carboxylate_ester_prodrug
+FDA_DRUGBANK,Adefovir dipivoxil,CC(C)(C)C(=O)OCOP(=O)(COCCn1cnc2c(N)ncnc21)OCOC(=O)C(C)(C)C,CC(C)(C)C(=O)OCOP(=O)(COCCn1cnc2c(N)ncnc21)OCOC(=O)C(C)(C)C,acyloxyalkyl_phosphinate_prodrug
+FDA_DRUGBANK,Perindopril,CCCC(NC(C)C(=O)N1C(C(=O)O)C[C@@H]2CCCC[C@@H]21)C(=O)OCC,CCCC(NC(C)C(=O)N1C(C(=O)O)C[C@@H]2CCCC[C@@H]21)C(=O)OCC,carboxylate_ester_prodrug
+FDA_DRUGBANK,Quinapril,CCOC(=O)C(CCc1ccccc1)NC(C)C(=O)N1Cc2ccccc2CC1C(=O)O,CCOC(=O)C(CCc1ccccc1)NC(C)C(=O)N1Cc2ccccc2CC1C(=O)O,carboxylate_ester_prodrug
+FDA_DRUGBANK,Cilazapril,CCOC(=O)C(CCc1ccccc1)NC1CCCN2CCCC(C(=O)O)N2C1=O,CCOC(=O)C(CCc1ccccc1)NC1CCCN2CCCC(C(=O)O)N2C1=O,carboxylate_ester_prodrug
+FDA_DRUGBANK,Spirapril,CCOC(=O)C(CCc1ccccc1)NC(C)C(=O)N1CC2(CC1C(=O)O)SCCS2,CCOC(=O)C(CCc1ccccc1)NC(C)C(=O)N1CC2(CC1C(=O)O)SCCS2,carboxylate_ester_prodrug
+FDA_DRUGBANK,Zofenopril,CC(CSC(=O)c1ccccc1)C(=O)N1C[C@@H](Sc2ccccc2)CC1C(=O)O,CC(CSC(=O)c1ccccc1)C(=O)N1C[C@@H](Sc2ccccc2)CC1C(=O)O,thioester_prodrug

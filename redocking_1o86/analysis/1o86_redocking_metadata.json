@@ -1,0 +1,26 @@
+{
+  "raw_pdb": "/content/drive/MyDrive/ACE_Workflow/data/raw/1o86.pdb",
+  "raw_pdb_sha256": "e9463b24b3389f7072b7b8b70feff64aadfa4600ad266a6f0d8fdfc4d835e573",
+  "receptor_pdbqt": "/content/drive/MyDrive/ACE_Workflow/redocking_1o86/receptor/1o86_receptor.pdbqt",
+  "box": {
+    "center_x": 41.01362068965516,
+    "center_y": 34.325206896551734,
+    "center_z": 46.44120689655172,
+    "size_x": 18.0,
+    "size_y": 18.048000000000002,
+    "size_z": 19.865000000000002,
+    "source": "1O86 chain A LPR (lisinopril) heavy-atom centroid"
+  },
+  "vina_version": "AutoDock Vina v1.2.5",
+  "seeds": [
+    7,
+    42,
+    2026
+  ],
+  "n_seeds_pass_2A": 0,
+  "min_passing_seeds": 2,
+  "redocking_passed": false,
+  "median_rmsd_A": 9.458204500818871,
+  "best_seed": 7,
+  "best_rmsd_A": 9.442119476415058
+}

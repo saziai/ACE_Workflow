@@ -1,0 +1,5 @@
+source,total,model_consensus,descriptor_pass,alerted_among_consensus,drugability_pass
+EXPERIMENTAL_ZIAI,7445,0,0,0,0
+FDA_DRUGBANK,2438,2,1,0,1
+NPASS,91920,1,0,0,0
+PLANTS_CMAUP,57855,1,0,0,0
