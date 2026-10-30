@@ -346,6 +346,45 @@ def split_ace_prodrugs(df: pd.DataFrame, smiles_col: str = "canonical_smiles") -
     return df.loc[~flagged].copy(), removed
 
 
+# --- Zinc-binding-group (ZBG) annotation ------------------------------------------------------------------------------
+# ACE is a zinc metallopeptidase and the main inhibitor classes carry a group that can coordinate the catalytic Zn.
+# These flags are an interpretable annotation, NOT a filter or an activity prediction (some natural-product inhibitors
+# may not bind through the zinc at all).
+ZBG_SMARTS = {
+    "carboxylic_acid": "[CX3](=O)[OX2H1,OX1-]",
+    "thiol": "[#6][SX2H1,SX1-]",
+    "phosphorus_acid": "[PX4](=O)[OX2H1,OX1-]",
+    "hydroxamic_acid": "[CX3](=O)[NX3][OX2H1,OX1-]",
+    "tetrazole": "[$(c1nn[nH]n1),$(c1nnn[nH]1),$(c1nnn[n-]1)]",
+}
+ZBG_WEAK_SMARTS = {"catechol": "c([OX2H1,OX1-])c[OX2H1,OX1-]"}   # possible chelator; weaker evidence
+_ZBG_PATTERNS: dict = {}
+
+
+def zinc_binding_groups(smiles: object) -> tuple[str, str]:
+    """Return (strong ZBG classes, weak chelator classes), each ';'-joined ('' when none)."""
+    from rdkit import Chem
+    if not _ZBG_PATTERNS:
+        _ZBG_PATTERNS["strong"] = {k: Chem.MolFromSmarts(v) for k, v in ZBG_SMARTS.items()}
+        _ZBG_PATTERNS["weak"] = {k: Chem.MolFromSmarts(v) for k, v in ZBG_WEAK_SMARTS.items()}
+    mol = Chem.MolFromSmiles(str(smiles)) if pd.notna(smiles) else None
+    if mol is None:
+        return "", ""
+    strong = ";".join(k for k, p in _ZBG_PATTERNS["strong"].items() if mol.HasSubstructMatch(p))
+    weak = ";".join(k for k, p in _ZBG_PATTERNS["weak"].items() if mol.HasSubstructMatch(p))
+    return strong, weak
+
+
+def annotate_zbg(df: pd.DataFrame, smiles_col: str = "canonical_smiles") -> pd.DataFrame:
+    """Add zbg_classes, weak_chelator_classes, has_zbg columns (one RDKit parse per unique SMILES)."""
+    out = df.copy()
+    lookup = {smi: zinc_binding_groups(smi) for smi in out[smiles_col].dropna().unique()}
+    out["zbg_classes"] = out[smiles_col].map(lambda x: lookup.get(x, ("", ""))[0])
+    out["weak_chelator_classes"] = out[smiles_col].map(lambda x: lookup.get(x, ("", ""))[1])
+    out["has_zbg"] = out["zbg_classes"].ne("")
+    return out
+
+
 def _biochemical_mask(work: pd.DataFrame) -> tuple[pd.Series, str, dict]:
     """Select biochemical / binding assays. Tries assay_type, then BAO format, then description keywords."""
     col = locate_column(work, ["assay_type"], required=False)

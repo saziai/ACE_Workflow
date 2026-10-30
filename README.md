@@ -59,8 +59,12 @@ wrapping quotes around values (`'IC50'`, `'='`) are removed.
 3. `notebooks/2-ACE-MODEL-REGRESSOR.ipynb` (writes `ace_tanimoto.py` to the project root)
 4. `notebooks/3-ACE-DRUGABILITY.ipynb`
 5. `notebooks/4-ACE-REDOCK-1O86.ipynb`
-6. `notebooks/5-ACE-DOCK-1O86.ipynb`
+6. `notebooks/5-ACE-DOCK-1O86.ipynb` (flexible Vina; redocking-failed protocol, kept for reference)
+   `notebooks/5b-ACE-DOCK-ENSEMBLE.ipynb` (conformer-ensemble protocol validated in notebook 4; docks the experiment plan from notebook 9)
 7. `notebooks/6-ACE-VIZ.ipynb`
+8. `notebooks/7-ACE-DOCK-SCREENING-POWER.ipynb` (does the Vina score separate measured actives from inactives?)
+9. `notebooks/8-ACE-ML-EVIDENCE.ipynb` (calibrated probabilities, conformal sets/intervals, applicability domain)
+10. `notebooks/9-ACE-EVIDENCE-TABLE.ipynb` (evidence tiers, zinc-binding annotation, experimental shortlist with controls)
 
 `3-ACE-DRUGABILITY` calculates Lipinski/Veber descriptors and Glaxo SMARTS
 alerts. They are transparent prioritization rules, not clinical ADMET or toxicity
@@ -79,6 +83,16 @@ Crystal structures often contain residues with unresolved side-chain atoms that 
 cannot parameterize. `4-ACE-REDOCK-1O86` lists them (`1o86_incomplete_residues.csv`),
 deletes only those far outside the docking box, and stops if an incomplete residue is
 near the pocket. The full Meeko log is saved next to the receptor files.
+
+## Evidence workflow (how candidates are supported)
+
+Redocking of lisinopril did not reproduce the crystal pose with the flexible Vina protocol, so docking scores are **not** treated as confirmation. Evidence comes from:
+
+1. **Validated ML models** (scaffold-grouped CV + external check), turned into per-candidate evidence in notebook 8: calibrated probability, class-conditional conformal prediction sets, conformal pChEMBL/IC50 intervals widened by applicability-domain bin.
+2. **Zinc-binding-group annotation** (`ace_config.zinc_binding_groups`): carboxylic acid, thiol, phosphorus acid, hydroxamic acid, tetrazole, plus catechol as a weak chelator. It is shown as interpretable evidence and never used as a filter.
+3. **Docking**, reported with its validation status. Candidate docking uses the conformer-ensemble protocol (notebook 5b), which reproduced the lisinopril crystal pose in 2 of 3 redocking seeds with thin score margins (weakly validated, pose reproduction only); it writes `ace_ensemble_dock.py` next to `ace_config.py` so notebooks 5b and 7 run identical code. Notebook 7 (which automatically uses the same protocol) tests whether the Vina score separates measured actives from size-matched measured inactives (ROC AUC with bootstrap CI, against heavy-atom, ligand-efficiency, size-adjusted and ZBG baselines). Notebook 9 counts docking as a supporting signal only if that test reports `USEFUL_BEYOND_SIZE`.
+
+Notebook 9 assigns explicit evidence tiers (A, B, exploratory, unsupported) and proposes a diverse shortlist for an ACE inhibition assay with positive controls (captopril, lisinopril) and size-matched negative controls from ChEMBL. Tiers describe computational support, not activity.
 
 ## Repository hygiene
 
