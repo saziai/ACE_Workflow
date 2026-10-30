@@ -75,6 +75,11 @@ term, ligands are docked in their neutral SMILES form with undefined stereocentr
 embedded arbitrarily, and the receptor is rigid. Treat docking and PLIP contacts
 as prioritisation evidence only; experimental ACE inhibition and ADMET testing are required.
 
+Crystal structures often contain residues with unresolved side-chain atoms that Meeko
+cannot parameterize. `4-ACE-REDOCK-1O86` lists them (`1o86_incomplete_residues.csv`),
+deletes only those far outside the docking box, and stops if an incomplete residue is
+near the pocket. The full Meeko log is saved next to the receptor files.
+
 ## Repository hygiene
 
 Do not commit `__pycache__/`. Check licences before publishing third-party raw data
