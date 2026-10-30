@@ -1,0 +1,10 @@
+residue,resname,missing_heavy_atoms,min_dist_to_LPR_A
+A:40,ASP,3,34.0
+A:64,GLU,4,12.7
+A:117,LYS,4,21.3
+A:298,SER,1,21.6
+A:303,GLU,4,17.1
+A:307,LYS,4,20.1
+A:439,SER,2,27.8
+A:440,ASP,3,27.1
+A:618,GLN,8,28.3

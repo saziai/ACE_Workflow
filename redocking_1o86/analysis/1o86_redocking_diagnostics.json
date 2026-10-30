@@ -1,0 +1,33 @@
+{
+  "crystal_pose_score_only": -7.771,
+  "crystal_local_only_score": -8.076,
+  "crystal_local_only_rmsd_A": 0.25,
+  "best_docked_score": -7.979,
+  "best_docked_rmsd_A": 9.46,
+  "crystal_closest_Zn_contact_A": [
+    2.14,
+    "O"
+  ],
+  "docked_closest_Zn_contact_A": [
+    5.67,
+    "N"
+  ],
+  "hints": [
+    "The crystal pose scores about as well as the docked pose: a sampling/search problem is possible (try higher exhaustiveness).",
+    "In the crystal pose a ligand O binds Zn at 2.1 A, but the docked pose does not (closest 5.7 A): the Zn-binding interaction is not being reproduced."
+  ],
+  "ionized_variant": [
+    {
+      "ligand_form": "ionised",
+      "seed": 7,
+      "affinity_kcal_mol": -8.262,
+      "heavy_atom_rmsd_A": 7.279875114976573
+    },
+    {
+      "ligand_form": "ionised",
+      "seed": 42,
+      "affinity_kcal_mol": -8.224,
+      "heavy_atom_rmsd_A": 7.326260607073612
+    }
+  ]
+}

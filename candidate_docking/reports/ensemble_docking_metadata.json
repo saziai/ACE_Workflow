@@ -1,0 +1,37 @@
+{
+  "protocol": "conformer_ensemble_rigid_docking_then_flexible_refinement",
+  "settings": {
+    "protocol": "conformer_ensemble_rigid_docking_then_flexible_refinement",
+    "conformers_per_seed": 100,
+    "rigid_exhaustiveness": 4,
+    "refine_top_k": 20,
+    "seeds": [
+      7,
+      42,
+      2026
+    ],
+    "seeds_passing": [
+      7,
+      2026
+    ],
+    "median_margin_kcal": 0.355
+  },
+  "seeds": [
+    7,
+    42,
+    2026
+  ],
+  "validation_status": "WEAKLY VALIDATED for pose reproduction of lisinopril: top-ranked pose within 2 A in 2/3 redocking seeds, median score margin 0.35 kcal/mol; affinity ranking not validated here",
+  "lisinopril_control": {
+    "per_seed_top_rmsd_A": {
+      "7": 1.3,
+      "42": 8.8,
+      "2026": 0.93
+    },
+    "best_of_seeds_seed": 2026,
+    "best_of_seeds_rmsd_A": 0.93
+  },
+  "lisinopril_score_kcal": -7.456,
+  "dg_tolerance_kcal": 1.0,
+  "receptor_sha256": "9d36944bf02818ba6e5be97fe03944b70522eca3b608e683dd7c1f93527ea7c0"
+}

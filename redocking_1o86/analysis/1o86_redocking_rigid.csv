@@ -1,0 +1,5 @@
+form,seed,top_score,top_rmsd_A,lowest_rmsd_A,lowest_rmsd_mode,lowest_rmsd_mode_score
+neutral,7,-14.836,0.22,0.22,1,-14.836
+neutral,42,-14.851,0.21,0.21,1,-14.851
+ionised,7,-14.116,0.22,0.22,1,-14.116
+ionised,42,-14.122,0.23,0.23,1,-14.122

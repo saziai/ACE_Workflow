@@ -13,7 +13,7 @@
   "biochemical_only": true,
   "censored_inactive_min_nM": 10000.0,
   "exclude_prodrugs": true,
-  "created_at_utc": "2026-10-24T14:40:12.581201+00:00",
+  "created_at_utc": "2026-10-24T17:58:16.840370+00:00",
   "inputs": {
     "CHEMBL1808": "/content/drive/MyDrive/ACE_Workflow/data/raw/CHEMBL1808.csv",
     "CHEMBL2096989": "/content/drive/MyDrive/ACE_Workflow/data/raw/CHEMBL2096989.csv",

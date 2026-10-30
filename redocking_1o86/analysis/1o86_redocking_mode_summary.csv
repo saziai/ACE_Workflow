@@ -1,0 +1,6 @@
+form,seed,n_modes,top_score,top_rmsd_A,top_Zn_OS_dist_A,lowest_rmsd_A,lowest_rmsd_mode,lowest_rmsd_mode_score,n_modes_with_Zn_contact,zn_restrained_mode,zn_restrained_score,zn_restrained_rmsd_A
+neutral,7,20,-7.889,9.43,6.61,6.91,16,-7.431,0,,,
+neutral,42,20,-7.979,9.46,6.61,6.69,4,-7.698,0,,,
+neutral,2026,20,-7.912,9.48,6.64,7.2,12,-7.45,1,12.0,-7.45,7.2
+ionised,7,20,-8.262,7.28,3.69,6.92,8,-7.846,0,,,
+ionised,42,20,-8.224,7.33,3.73,7.33,1,-8.224,0,,,

@@ -1,0 +1,8 @@
+{
+  "n_screened": 159658,
+  "n_model_consensus": 4,
+  "n_drugability_pass": 1,
+  "n_docked": 0,
+  "figure_directory": "/content/drive/MyDrive/ACE_Workflow/visualization/figures",
+  "note": "Computational ranking is hypothesis-generating and requires experimental ACE inhibition and ADMET confirmation."
+}

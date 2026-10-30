@@ -1,0 +1,21 @@
+{
+  "unique_chemicals": 96174,
+  "tier_counts": {
+    "unsupported": 96173,
+    "A": 1
+  },
+  "shortlist_candidates": 1,
+  "positive_controls": 2,
+  "negative_controls": 3,
+  "docking_available": true,
+  "docking_protocol": "conformer_ensemble_rigid_docking_then_flexible_refinement",
+  "docking_use": "reported only (screening power not assessed)",
+  "docking_screening_power_verdict": "NOT_ASSESSED",
+  "screening_power_protocol": null,
+  "tier_rules": {
+    "A": "drugability pass, conformal set active, calibrated p >= 0.5, in-domain",
+    "B": "drugability pass, conformal active/uncertain, calibrated p >= 0.3, in-domain or borderline",
+    "exploratory": "drugability pass, raw p >= 0.5, out-of-domain (reliability unknown)"
+  },
+  "zbg_is_a_filter": false
+}

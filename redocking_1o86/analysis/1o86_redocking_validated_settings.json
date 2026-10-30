@@ -1,0 +1,16 @@
+{
+  "protocol": "conformer_ensemble_rigid_docking_then_flexible_refinement",
+  "conformers_per_seed": 100,
+  "rigid_exhaustiveness": 4,
+  "refine_top_k": 20,
+  "seeds": [
+    7,
+    42,
+    2026
+  ],
+  "seeds_passing": [
+    7,
+    2026
+  ],
+  "median_margin_kcal": 0.355
+}

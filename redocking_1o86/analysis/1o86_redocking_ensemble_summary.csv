@@ -1,0 +1,4 @@
+seed,conformers,conformers_rigid_within_2A,best_rigid_rmsd_A,top_rmsd_A,top_score,best_crystal_like_rank,margin_vs_best_wrong_kcal,top_pass_2A
+7,100,2,1.02,1.3,-6.959,1.0,0.09,True
+42,98,0,2.79,8.8,-6.68,,,False
+2026,99,2,1.14,0.93,-7.456,1.0,0.62,True

@@ -1,0 +1,103 @@
+Template padding will be used.
+[32m gasteiger charges will be read from template file 
+ [0m
+
+Files written:
+/content/drive/MyDrive/ACE_Workflow/redocking_1o86/receptor/1o86_receptor.pdbqt <-- static (i.e., rigid) receptor input file
+No template matched for residue_key='A:40'
+tried 6 templates for residue_key='A:40'excess_H_ok=False
+ASP        heavy_miss=3 heavy_excess=0 H_excess=[] bond_miss={4} bond_excess=set()
+NASP       heavy_miss=3 heavy_excess=0 H_excess=[] bond_miss=set() bond_excess=set()
+CASP       heavy_miss=4 heavy_excess=0 H_excess=[] bond_miss={5} bond_excess={1}
+ASH        heavy_miss=3 heavy_excess=0 H_excess=[] bond_miss={4} bond_excess=set()
+CASH       heavy_miss=4 heavy_excess=0 H_excess=[] bond_miss={5} bond_excess={1}
+NASH       heavy_miss=3 heavy_excess=0 H_excess=[] bond_miss=set() bond_excess=set()
+
+No template matched for residue_key='A:64'
+tried 6 templates for residue_key='A:64'excess_H_ok=False
+GLU        heavy_miss=4 heavy_excess=0 H_excess=[] bond_miss=set() bond_excess=set()
+NGLU       heavy_miss=4 heavy_excess=0 H_excess=[] bond_miss=set() bond_excess={4}
+CGLU       heavy_miss=5 heavy_excess=0 H_excess=[] bond_miss=set() bond_excess={1}
+GLH        heavy_miss=4 heavy_excess=0 H_excess=[] bond_miss=set() bond_excess=set()
+NGLH       heavy_miss=4 heavy_excess=0 H_excess=[] bond_miss=set() bond_excess={4}
+CGLH       heavy_miss=5 heavy_excess=0 H_excess=[] bond_miss=set() bond_excess={1}
+
+matched with excess inter-residue bond(s): A:64
+No template matched for residue_key='A:117'
+tried 6 templates for residue_key='A:117'excess_H_ok=False
+LYS        heavy_miss=4 heavy_excess=0 H_excess=[] bond_miss=set() bond_excess=set()
+NLYS       heavy_miss=4 heavy_excess=0 H_excess=[] bond_miss=set() bond_excess={4}
+CLYS       heavy_miss=5 heavy_excess=0 H_excess=[] bond_miss=set() bond_excess={1}
+LYN        heavy_miss=4 heavy_excess=0 H_excess=[] bond_miss=set() bond_excess=set()
+NLYN       heavy_miss=4 heavy_excess=0 H_excess=[] bond_miss=set() bond_excess={4}
+CLYN       heavy_miss=5 heavy_excess=0 H_excess=[] bond_miss=set() bond_excess={1}
+
+matched with excess inter-residue bond(s): A:117
+No template matched for residue_key='A:298'
+tried 3 templates for residue_key='A:298'excess_H_ok=False
+SER        heavy_miss=1 heavy_excess=0 H_excess=[] bond_miss=set() bond_excess=set()
+NSER       heavy_miss=1 heavy_excess=0 H_excess=[] bond_miss=set() bond_excess={4}
+CSER       heavy_miss=2 heavy_excess=0 H_excess=[] bond_miss=set() bond_excess={1}
+
+matched with excess inter-residue bond(s): A:298
+No template matched for residue_key='A:303'
+tried 6 templates for residue_key='A:303'excess_H_ok=False
+GLU        heavy_miss=4 heavy_excess=0 H_excess=[] bond_miss=set() bond_excess=set()
+NGLU       heavy_miss=4 heavy_excess=0 H_excess=[] bond_miss=set() bond_excess={4}
+CGLU       heavy_miss=5 heavy_excess=0 H_excess=[] bond_miss=set() bond_excess={1}
+GLH        heavy_miss=4 heavy_excess=0 H_excess=[] bond_miss=set() bond_excess=set()
+NGLH       heavy_miss=4 heavy_excess=0 H_excess=[] bond_miss=set() bond_excess={4}
+CGLH       heavy_miss=5 heavy_excess=0 H_excess=[] bond_miss=set() bond_excess={1}
+
+matched with excess inter-residue bond(s): A:303
+No template matched for residue_key='A:307'
+tried 6 templates for residue_key='A:307'excess_H_ok=False
+LYS        heavy_miss=4 heavy_excess=0 H_excess=[] bond_miss=set() bond_excess=set()
+NLYS       heavy_miss=4 heavy_excess=0 H_excess=[] bond_miss=set() bond_excess={4}
+CLYS       heavy_miss=5 heavy_excess=0 H_excess=[] bond_miss=set() bond_excess={1}
+LYN        heavy_miss=4 heavy_excess=0 H_excess=[] bond_miss=set() bond_excess=set()
+NLYN       heavy_miss=4 heavy_excess=0 H_excess=[] bond_miss=set() bond_excess={4}
+CLYN       heavy_miss=5 heavy_excess=0 H_excess=[] bond_miss=set() bond_excess={1}
+
+matched with excess inter-residue bond(s): A:307
+No template matched for residue_key='A:439'
+tried 3 templates for residue_key='A:439'excess_H_ok=False
+SER        heavy_miss=2 heavy_excess=0 H_excess=[] bond_miss={4} bond_excess=set()
+NSER       heavy_miss=2 heavy_excess=0 H_excess=[] bond_miss=set() bond_excess=set()
+CSER       heavy_miss=3 heavy_excess=0 H_excess=[] bond_miss={5} bond_excess={1}
+
+matched with excess inter-residue bond(s): A:439
+No template matched for residue_key='A:440'
+tried 6 templates for residue_key='A:440'excess_H_ok=False
+ASP        heavy_miss=3 heavy_excess=0 H_excess=[] bond_miss=set() bond_excess=set()
+NASP       heavy_miss=3 heavy_excess=0 H_excess=[] bond_miss=set() bond_excess={4}
+CASP       heavy_miss=4 heavy_excess=0 H_excess=[] bond_miss=set() bond_excess={1}
+ASH        heavy_miss=3 heavy_excess=0 H_excess=[] bond_miss=set() bond_excess=set()
+CASH       heavy_miss=4 heavy_excess=0 H_excess=[] bond_miss=set() bond_excess={1}
+NASH       heavy_miss=3 heavy_excess=0 H_excess=[] bond_miss=set() bond_excess={4}
+
+matched with excess inter-residue bond(s): A:440
+No template matched for residue_key='A:618'
+tried 3 templates for residue_key='A:618'excess_H_ok=False
+GLN        heavy_miss=8 heavy_excess=0 H_excess=[] bond_miss={0} bond_excess=set()
+NGLN       heavy_miss=8 heavy_excess=0 H_excess=[] bond_miss={0} bond_excess={4}
+CGLN       heavy_miss=9 heavy_excess=0 H_excess=[] bond_miss=set() bond_excess=set()
+
+
+Ignored A:40: 27.3462 A outside box (> delete_bad_res_from_box_radius=6.0).
+
+Ignored A:64: 9.1625 A outside box (> delete_bad_res_from_box_radius=6.0).
+
+Ignored A:117: 14.5680 A outside box (> delete_bad_res_from_box_radius=6.0).
+
+Ignored A:298: 11.1683 A outside box (> delete_bad_res_from_box_radius=6.0).
+
+Ignored A:303: 9.5205 A outside box (> delete_bad_res_from_box_radius=6.0).
+
+Ignored A:307: 13.2833 A outside box (> delete_bad_res_from_box_radius=6.0).
+
+Ignored A:439: 18.9908 A outside box (> delete_bad_res_from_box_radius=6.0).
+
+Ignored A:440: 18.6963 A outside box (> delete_bad_res_from_box_radius=6.0).
+
+Ignored A:618: 20.6314 A outside box (> delete_bad_res_from_box_radius=6.0).

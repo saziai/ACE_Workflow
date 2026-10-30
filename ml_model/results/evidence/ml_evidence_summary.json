@@ -1,0 +1,67 @@
+{
+  "classifier_model": "Random Forest",
+  "calibration_method": "raw",
+  "calibration_table": {
+    "brier": {
+      "raw": 0.1077,
+      "platt": 0.1099,
+      "isotonic": 0.1118
+    },
+    "log_loss": {
+      "raw": 0.3553,
+      "platt": 0.3642,
+      "isotonic": 0.389
+    },
+    "ece": {
+      "raw": 0.0355,
+      "platt": 0.0301,
+      "isotonic": 0.0343
+    },
+    "roc_auc": {
+      "raw": 0.8906,
+      "platt": 0.8839,
+      "isotonic": 0.8694
+    }
+  },
+  "conformal_epsilon": 0.2,
+  "conformal_grouped_cv": {
+    "coverage_active": 0.8013,
+    "coverage_inactive": 0.7972,
+    "target": 0.8,
+    "frac_active": 0.3407,
+    "frac_inactive": 0.6271,
+    "frac_uncertain (both)": 0.0017,
+    "frac_empty": 0.0305
+  },
+  "regressor_model": "tanimoto_svr",
+  "regression_grouped_cv_coverage": 0.7802197802197802,
+  "interval_half_widths_pchembl": {
+    "out-of-domain": [
+      1.261,
+      "pooled"
+    ],
+    "borderline": [
+      1.479,
+      "bin"
+    ],
+    "in-domain": [
+      1.101,
+      "bin"
+    ]
+  },
+  "ad_edges": [
+    0.0,
+    0.35,
+    0.55,
+    1.0001
+  ],
+  "ad_labels": [
+    "out-of-domain",
+    "borderline",
+    "in-domain"
+  ],
+  "folds_match_notebook1": true,
+  "external_n_classifier": 36,
+  "external_n_regressor": 36,
+  "activity_pchembl_cutoff": 7.6020599913279625
+}

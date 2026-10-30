@@ -1,0 +1,4 @@
+seed,pose_pdbqt,affinity_kcal_mol,heavy_atom_rmsd_A,pass_2A
+7,/content/drive/MyDrive/ACE_Workflow/redocking_1o86/docking/LPR_redocked_seed_7.pdbqt,-7.889,9.43201957567212,False
+42,/content/drive/MyDrive/ACE_Workflow/redocking_1o86/docking/LPR_redocked_seed_42.pdbqt,-7.979,9.460318704990863,False
+2026,/content/drive/MyDrive/ACE_Workflow/redocking_1o86/docking/LPR_redocked_seed_2026.pdbqt,-7.912,9.484436296484308,False
